@@ -20,12 +20,12 @@ export default function ClarifyStep({ parsed, config, setConfig, onProceed, onBa
       </div>
 
       <div className="glass-card">
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingBottom: '14px', borderBottom: '1px solid var(--divider)', marginBottom: '16px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingBottom: '14px', borderBottom: '1px solid var(--border-subtle)', marginBottom: '16px' }}>
           <div>
-            <span style={{ fontSize: '0.8rem', color: 'var(--foreground-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+            <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
               Investigating Query
             </span>
-            <div style={{ fontSize: '1.15rem', fontWeight: 600, color: 'var(--foreground)', marginTop: '2px' }}>
+            <div style={{ fontSize: '1.15rem', fontWeight: 600, color: '#f8fafc', marginTop: '2px' }}>
               “{parsed.rawQuestion}”
             </div>
           </div>
@@ -48,7 +48,7 @@ export default function ClarifyStep({ parsed, config, setConfig, onProceed, onBa
             {parsed.ambiguities.map((item, idx) => (
               <tr key={idx}>
                 <td>
-                  <strong style={{ color: 'var(--foreground)', fontSize: '0.92rem' }}>{item.parameter}</strong>
+                  <strong style={{ color: 'var(--text-primary)', fontSize: '0.92rem' }}>{item.parameter}</strong>
                 </td>
                 <td>
                   <span className="badge-user" style={{ whiteSpace: 'normal', textAlign: 'left' }}>
@@ -59,7 +59,7 @@ export default function ClarifyStep({ parsed, config, setConfig, onProceed, onBa
                   <div style={{ marginBottom: '4px' }}>
                     <span className="badge-assumed">{item.aiAssumed}</span>
                   </div>
-                  <div style={{ fontSize: '0.78rem', color: 'var(--foreground-muted)', lineHeight: 1.4 }}>
+                  <div style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', lineHeight: 1.4 }}>
                     {item.rationale}
                   </div>
                 </td>
@@ -78,7 +78,7 @@ export default function ClarifyStep({ parsed, config, setConfig, onProceed, onBa
                         <option value={-2.5}>-2.5% (Severe Crash)</option>
                         <option value={-3.0}>-3.0% (Extreme Panic)</option>
                       </select>
-                      <span style={{ fontSize: '0.72rem', color: 'var(--foreground-muted)' }}>
+                      <span style={{ fontSize: '0.72rem', color: '#94a3b8' }}>
                         Selected: {Math.abs(config.dropThreshold)}% daily decline
                       </span>
                     </div>
@@ -95,7 +95,7 @@ export default function ClarifyStep({ parsed, config, setConfig, onProceed, onBa
                         <option value="next_open">Next Day Open (9:15 AM - Realistic)</option>
                         <option value="same_close">Same Day Close (3:25 PM - Theoretical)</option>
                       </select>
-                      <span style={{ fontSize: '0.72rem', color: config.entryTiming === 'next_open' ? 'var(--positive)' : 'var(--foreground-muted)' }}>
+                      <span style={{ fontSize: '0.72rem', color: config.entryTiming === 'next_open' ? '#10b981' : '#f59e0b' }}>
                         {config.entryTiming === 'next_open' ? '✓ Zero Look-Ahead Bias' : '⚠ Requires MOC order'}
                       </span>
                     </div>
@@ -115,7 +115,7 @@ export default function ClarifyStep({ parsed, config, setConfig, onProceed, onBa
                         <option value={7}>7 Trading Days (Multi-day)</option>
                         <option value={10}>10 Trading Days (2 Weeks)</option>
                       </select>
-                      <span style={{ fontSize: '0.72rem', color: 'var(--foreground-muted)' }}>
+                      <span style={{ fontSize: '0.72rem', color: '#94a3b8' }}>
                         Holding duration: {config.holdingPeriod} sessions
                       </span>
                     </div>
@@ -132,14 +132,14 @@ export default function ClarifyStep({ parsed, config, setConfig, onProceed, onBa
                         <option value="none">No Filter (All 10 Years)</option>
                         <option value="above_200_sma">Bull Regime Only (Above 200 SMA)</option>
                       </select>
-                      <span style={{ fontSize: '0.72rem', color: 'var(--foreground-muted)' }}>
+                      <span style={{ fontSize: '0.72rem', color: '#94a3b8' }}>
                         {config.trendFilter === 'above_200_sma' ? 'Filters out bear crashes' : 'Exposes to all regimes'}
                       </span>
                     </div>
                   )}
 
                   {item.key === 'costBps' && (
-                    <span style={{ fontSize: '0.82rem', fontFamily: 'var(--font-mono)', color: 'var(--primary)', padding: '4px 10px', background: 'var(--primary-soft)', borderRadius: 'var(--radius-sm)', display: 'inline-block' }}>
+                    <span style={{ fontSize: '0.82rem', fontFamily: 'var(--font-mono)', color: '#a5b4fc', padding: '4px 8px', background: 'rgba(99, 102, 241, 0.1)', borderRadius: '4px' }}>
                       0.08% / trade (STT + Slippage)
                     </span>
                   )}

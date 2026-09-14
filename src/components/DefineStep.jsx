@@ -38,7 +38,7 @@ export default function DefineStep({ parsed, config, onRunTest, onBack }) {
 
           <div className="canvas-card">
             <div className="canvas-card-label">Condition (Signal)</div>
-            <div className="canvas-card-val" style={{ color: 'var(--negative)' }}>
+            <div className="canvas-card-val" style={{ color: '#f43f5e' }}>
               Daily Close Drop ≤ {config.dropThreshold}%
             </div>
             <div className="canvas-card-desc">
@@ -48,7 +48,7 @@ export default function DefineStep({ parsed, config, onRunTest, onBack }) {
 
           <div className="canvas-card">
             <div className="canvas-card-label">Entry Execution</div>
-            <div className="canvas-card-val" style={{ color: 'var(--positive)' }}>
+            <div className="canvas-card-val" style={{ color: '#10b981' }}>
               {config.entryTiming === 'next_open' ? 'Market Open (t+1)' : 'Market Close (t)'}
             </div>
             <div className="canvas-card-desc">
@@ -86,7 +86,7 @@ export default function DefineStep({ parsed, config, onRunTest, onBack }) {
 
           <div className="canvas-card">
             <div className="canvas-card-label">Regime Filter</div>
-            <div className="canvas-card-val" style={{ color: config.trendFilter === 'above_200_sma' ? 'var(--primary)' : 'var(--foreground-muted)' }}>
+            <div className="canvas-card-val" style={{ color: config.trendFilter === 'above_200_sma' ? '#818cf8' : '#94a3b8' }}>
               {config.trendFilter === 'above_200_sma' ? '200-day SMA Bull Filter' : 'None (All Regimes)'}
             </div>
             <div className="canvas-card-desc">

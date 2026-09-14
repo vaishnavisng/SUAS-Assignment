@@ -22,17 +22,17 @@ export default function LearnStep({ results, onApplyNextHypothesis, onRestart })
       <div className="learn-grid">
         {/* Column 1: Facts */}
         <div className="glass-card learn-col-facts">
-          <div className="learn-col-title" style={{ color: 'var(--positive)' }}>
+          <div className="learn-col-title" style={{ color: 'var(--success)' }}>
             <CheckCircle2 size={20} />
             <span>What the Data Actually Shows (Empirical Facts)</span>
           </div>
-          <p style={{ fontSize: '0.84rem', color: 'var(--foreground-muted)', marginBottom: '16px' }}>
+          <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: '16px' }}>
             Strictly verifiable mathematical observations from 10 years of NIFTY 50 daily bars:
           </p>
           <ul className="facts-list">
             {learnings.empiricalFacts.map((fact, idx) => (
               <li key={idx} className="fact-item">
-                <span style={{ color: 'var(--positive)', fontWeight: 'bold' }}>•</span>
+                <span style={{ color: 'var(--success)', fontWeight: 'bold' }}>•</span>
                 <span>{fact}</span>
               </li>
             ))}
@@ -41,11 +41,11 @@ export default function LearnStep({ results, onApplyNextHypothesis, onRestart })
 
         {/* Column 2: Inferences */}
         <div className="glass-card learn-col-inferences">
-          <div className="learn-col-title" style={{ color: 'var(--primary)' }}>
+          <div className="learn-col-title" style={{ color: '#818cf8' }}>
             <Compass size={20} />
             <span>What We Can Reasonably Conclude (System Beliefs)</span>
           </div>
-          <p style={{ fontSize: '0.84rem', color: 'var(--foreground-muted)', marginBottom: '16px' }}>
+          <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: '16px' }}>
             Contextual interpretation, theoretical considerations, and market nuance:
           </p>
           <div>
@@ -79,11 +79,11 @@ export default function LearnStep({ results, onApplyNextHypothesis, onRestart })
       <div className="next-hypotheses-container">
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <div>
-            <h3 style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--foreground)', display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <Sparkles size={18} color="var(--primary)" />
+            <h3 style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <Sparkles size={18} color="var(--accent-primary)" />
               What Should We Investigate Next?
             </h3>
-            <p style={{ fontSize: '0.86rem', color: 'var(--foreground-muted)', marginTop: '4px' }}>
+            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '4px' }}>
               True research is iterative. Select a follow-up hypothesis below to re-calibrate and test immediately:
             </p>
           </div>
