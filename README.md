@@ -129,7 +129,7 @@ npm run preview
   6. **Rejection of Black-Box Models**: Rejected automated ML classifiers in favor of transparent, interpretable, and falsifiable scientific experimentation.
   7. **Iterative Learning Loop**: Conceived and designed the 1-click **"What Should We Investigate Next?"** feedback engine.
 
-*(For full details, see [AI_USAGE_NOTE.md](file:///c:/Rishabh/assignment/AI_USAGE_NOTE.md))*
+*(For full details, see [AI_USAGE_NOTE.md](file:///c:/Vaishnavi/assignment/AI_USAGE_NOTE.md))*
 
 ---
 
@@ -144,6 +144,6 @@ npm run preview
 
 ## Deliverables Checklist
 - [x] **Working Web Prototype** (React + Vite + Vanilla CSS)
-- [x] **[Thinking Note](file:///c:/Rishabh/assignment/THINKING_NOTE.md)** (Answering all 5 questions on interpretation, assumptions, and risks)
-- [x] **[AI Usage Note](file:///c:/Rishabh/assignment/AI_USAGE_NOTE.md)** (Complete reflection answering the 5 evaluation criteria)
-- [x] **[README](file:///c:/Rishabh/assignment/README.md)** (Full architectural documentation and setup instructions)
+- [x] **[Thinking Note](file:///c:/Vaishnavi/assignment/THINKING_NOTE.md)** (Answering all 5 questions on interpretation, assumptions, and risks)
+- [x] **[AI Usage Note](file:///c:/Vaishnavi/assignment/AI_USAGE_NOTE.md)** (Complete reflection answering the 5 evaluation criteria)
+- [x] **[README](file:///c:/Vaishnavi/assignment/README.md)** (Full architectural documentation and setup instructions)

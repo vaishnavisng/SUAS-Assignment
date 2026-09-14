@@ -17,7 +17,7 @@ export default function AskStep({ query, setQuery, onProceed }) {
 
   return (
     <div className="animate-fade-in ask-hero">
-      <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '4px 14px', borderRadius: '999px', background: 'rgba(99, 102, 241, 0.15)', color: '#818cf8', fontSize: '0.8rem', fontWeight: 600, marginBottom: '16px', border: '1px solid rgba(99, 102, 241, 0.3)' }}>
+      <div className="ask-badge">
         <Sparkles size={14} /> AI-Native Quantitative Research Engine
       </div>
       
