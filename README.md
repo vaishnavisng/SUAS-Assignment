@@ -146,5 +146,4 @@ npm run preview
 - [x] **Working Web Prototype** (React + Vite + Vanilla CSS)
 - [x] **[Thinking Note](file:///c:/Rishabh/assignment/THINKING_NOTE.md)** (Answering all 5 questions on interpretation, assumptions, and risks)
 - [x] **[AI Usage Note](file:///c:/Rishabh/assignment/AI_USAGE_NOTE.md)** (Complete reflection answering the 5 evaluation criteria)
-- [x] **[Demo Script](file:///c:/Rishabh/assignment/DEMO_SCRIPT.md)** (2–3 minute video presentation script)
 - [x] **[README](file:///c:/Rishabh/assignment/README.md)** (Full architectural documentation and setup instructions)
