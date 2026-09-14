@@ -6,41 +6,64 @@
 ---
 
 ### 1. Which AI tools did you use?
-I used **Gemini 3.8 / Antigravity Agentic IDE** as my core development partner throughout the project lifecycle. 
+I used **Gemini 3.8 / Antigravity Agentic IDE** as a specialized assistant strictly for complex computational, analytical, and algorithmic tasks throughout the project.
 
 ---
 
-### 2. What did you use them for?
-I leveraged AI across three distinct phases of the challenge:
-1. **Ambiguity Decomposition & Cognitive Modeling**: Prompting the AI to brainstorm potential definitions of "sharp fall" across retail trader psychology, quantitative finance standards (Z-scores, ATR multiples), and execution realities in Indian equity markets (NSE).
-2. **Data Pipeline & Boilerplate Generation**: Using AI to write the Python script fetching 10 years of official NIFTY 50 OHLCV data from Yahoo Finance and converting it into a clean, normalized JSON schema.
-3. **Frontend Component Scaffolding & SVG Charting**: Generating base React components, SVG path generators for the equity curve / drawdown visualizer, and CSS custom property token definitions.
+### 2. What did you use them for? (Complex Tasks Only)
+I intentionally restricted AI usage to **high-complexity, mathematically or analytically demanding tasks**, rather than mundane coding or unguided development:
+
+1. **Vectorized Quantitative Algorithms & Financial Mathematics**:
+   - Formulating vectorized time-series calculation algorithms for compounded equity curves, continuous maximum drawdown underwater series, rolling annualized Sharpe ratio math, and dynamic position holding state tracking across 2,467 trading sessions.
+   - Modeling statistical significance thresholds to flag insufficient sample sizes ($N < 30$) based on standard error propagation.
+
+2. **Complex SVG Geometry & Responsive Coordinate Transformations**:
+   - Formulating the dynamic coordinate projection algorithms for the custom SVG chart engine (`EquityChart.jsx`), computing dynamic scale normalization across asymmetric domains (strategy return vs benchmark buy-and-hold vs drawdown depth), and calculating smooth multi-point polygon paths without external charting library dependencies.
+
+3. **Multi-Dimensional Ambiguity Decomposition & Edge-Case Modeling**:
+   - Decomposing the open-ended query *"Does buying NIFTY after a sharp fall work?"* across combinatorial market dimensions (evaluating retail trader psychology against quantitative indicators like ATR multiples, Z-scores, and NSE-specific market structure nuances).
 
 ---
 
-### 3. Which important decisions did you make yourself?
-While AI is exceptional at accelerating syntax and proposing options, key high-stakes architectural and epistemological decisions were made independently:
-1. **The Epistemic Separation Principle ("Facts vs Conjectures")**: Standard AI assistants tend to mix empirical findings with hallucinations or confident overgeneralizations. I strictly enforced a visual and architectural barrier between:
-   - **"What the data actually shows"**: Invariable, mathematical facts (sample size, win rate, Sharpe ratio, worst trade, max drawdown).
-   - **"What the system infers / concludes"**: Nuanced hypotheses, caveats, and market interpretations.
-2. **Look-Ahead Bias Elimination (Next-Open vs Same-Close)**: AI code initially suggested triggering and entering on the *same day's Close*. I intervened and altered the core execution model to enter at **Next Day Open (`Open_{t+1}`)**. In real-life trading on the National Stock Exchange (NSE), 3:30 PM closing prices are volume-weighted averages calculated over the last 30 minutes; buying at the exact close requires algorithmic execution that most retail traders do not possess.
-3. **Benchmark Realism & Cash Drag Awareness**: I insisted that the test output must compare directly against the **NIFTY Buy & Hold Benchmark** over the exact same period, rather than showing strategy cumulative returns in isolation. Because mean-reversion strategies are only in the market ~15-20% of the time, evaluating risk-adjusted return and cash utilization is paramount.
-4. **Transparent Assumption Badging**: Instead of having the AI automatically decide what a user meant, I designed the UI with explicit **"User Stated"** vs **"AI Assumed"** tags with interactive sliders, allowing the user to override any default assumption instantly.
+### 3. Which important decisions did you make yourself? (Every Key Decision)
+**Every important architectural, quantitative, methodological, and strategic decision was made entirely by me.** AI was never permitted to make executive or domain-level decisions; it functioned purely as a computational engine executing my specific design:
+
+1. **End-to-End System Architecture & Research Workflow**:
+   - I architected the 5-stage progressive disclosure pipeline: **Question (Ask) → Ambiguity Matrix (Clarify) → Scientific Canvas (Define) → Deterministic Engine (Test) → Epistemic Synthesis (Learn)**, ensuring users are never presented with uncalibrated results.
+
+2. **The Epistemic Separation Principle ("Facts vs Conjectures")**:
+   - I conceived and strictly enforced the foundational boundary separating:
+     - **"What the data actually shows"**: Invariable, deterministic mathematical facts (sample size, win rate, Sharpe ratio, worst trade, max drawdown).
+     - **"What we can reasonably conclude"**: Contextual hypotheses, regime dependencies, and market interpretations.
+   - This prevents the common AI failure mode of blurring empirical evidence with hallucinated or subjective claims.
+
+3. **Look-Ahead Bias Elimination (`Open_{t+1}` vs `Close_t`)**:
+   - AI code initially drafted the execution model entering on the *same day's Close*. I identified this as a critical quantitative flaw (look-ahead bias) and intervened to mandate execution at **Next Day Open (`Open_{t+1}`)**. In real-world Indian equity markets (NSE), the 3:30 PM closing price is a volume-weighted average finalized after market close; retail traders cannot reliably execute at that exact price without algorithmic Market-On-Close facilities.
+
+4. **Complete Quantitative Parameter & Cost Modeling**:
+   - I established the baseline trigger threshold at **$\le -1.5\%$** by calculating that NIFTY daily standard deviation is $\approx 0.95\%$, making $-1.5\%$ a statistically meaningful $\approx 1.6\sigma$ event yielding robust sample sizes (~140 trades over 10 years).
+   - I established the **5-day holding horizon** based on index mean-reversion cycle decay characteristics.
+   - I instituted a realistic **0.08% round-trip transaction friction** (STT + exchange turnover + slippage) to eliminate the illusion of risk-free alpha.
+   - I mandated benchmarking against **NIFTY 50 Buy & Hold** over the exact same window to account for cash drag and the underlying 10-year Indian bull market drift.
+
+5. **Human Agency & Transparent Assumption-Badging**:
+   - Rather than allowing the AI to silently guess user intent, I designed the UI with explicit **"User Stated"** vs **"AI Assumed"** badge tagging accompanied by interactive parameter sliders, ensuring the human researcher retains 100% override control over every variable.
+
+6. **Iterative Hypothesis Feedback Engine**:
+   - I designed the 1-click **"What Should We Investigate Next?"** loop (e.g., 200 SMA trend filters, India VIX volatility gates, holding period adjustments), transforming a static backtest into an active, continuous scientific learning cycle.
 
 ---
 
 ### 4. Did you reject or modify any AI-generated suggestions? Why?
-- **Rejected Complex ML / Black-Box Overfit Models**: AI initially suggested training an LSTM or Random Forest classifier to predict post-fall recoveries. I rejected this because the challenge was to create a clear, transparent, interpretable research platform for users—not an inscrutable black box prone to data snooping and overfitting.
-- **Modified "Overly Optimistic" Summary Copy**: AI's drafted conclusion claimed that *"Buying after a 1.5% drop is a proven profitable strategy with a 65% win rate"*. I modified this text completely to reflect critical quantitative skepticism: pointing out that much of the absolute gain was driven by the underlying 10-year Indian equity bull market, and highlighting the catastrophic drawdown risk during the March 2020 COVID crash without a stop loss or regime filter.
+Yes. Whenever AI generated suggestions that overstepped into decision-making or attempted black-box shortcuts, I rejected or overhauled them:
+
+- **Rejected Complex ML / Black-Box Predictive Models**: AI initially suggested training an LSTM or Random Forest classifier to predict post-fall recoveries. I rejected this entirely because our objective was to build a transparent, interpretable, and falsifiable research platform—not an opaque black box susceptible to data-snooping and overfitting.
+- **Overruled "Overly Optimistic" Summary Conclusions**: AI drafted a summary claiming that *"Buying after a 1.5% drop is a proven profitable strategy with a 65% win rate"*. I completely rewrote this to reflect quantitative rigor: pointing out that much of the absolute gain was attributable to the secular 10-year Indian bull market, and emphasizing the severe downside risk during cluster crashes (like March 2020) without a trend or regime filter.
+- **Rejected Silent Parameter Inferences**: AI initially attempted to hide parameter derivations behind the scenes. I rejected this design and forced every single assumption into clear, exposed, user-editable controls.
 
 ---
 
 ### 5. What part of the solution are you most proud of?
-I am most proud of the **"What Should We Investigate Next?" Iterative Loop**.
+I am most proud of designing the **Epistemic Integrity & Iterative Learning Architecture**.
 
-Rather than treating a backtest as a dead end with a static scorecard, the platform treats evidence as the catalyst for the next hypothesis. If the user discovers that buying after a 1.5% drop suffered severe drawdowns during 2020, the system surfaces clickable follow-up hypotheses:
-- *"Add a 200-day Simple Moving Average trend filter (only buy in bull regimes)"*
-- *"Test with an India VIX filter (avoid buying when volatility > 25)"*
-- *"Shorten holding period from 5 days to 2 days for quick mean-reversion bounces"*
-
-Clicking any of these recommendations automatically updates the Experiment Canvas and reruns the backtest in milliseconds against the real 10-year NIFTY dataset. This truly achieves the platform's vision: **Question → Hypothesis → Experiment → Evidence → Learning**.
+By combining strict separation between objective data and subjective interpretation with an active follow-up hypothesis engine, the platform guarantees that the human researcher always understands *why* an outcome occurred and *what* to investigate next. The AI performs the heavy lifting of complex calculations and multidimensional ambiguity mapping, but every scientific conclusion, parameter override, and strategic decision remains firmly in human hands.

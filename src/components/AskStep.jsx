@@ -27,7 +27,7 @@ export default function AskStep({ query, setQuery, onProceed }) {
       </p>
 
       <form onSubmit={handleSubmit} className="query-input-container">
-        <Search size={20} color="#64748b" style={{ marginTop: '2px' }} />
+        <Search size={20} className="query-search-icon" />
         <input
           id="research-query-input"
           type="text"

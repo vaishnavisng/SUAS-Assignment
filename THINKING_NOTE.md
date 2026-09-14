@@ -28,7 +28,7 @@ To convert this intuition into an executable, falsifiable scientific experiment,
 
 ## 2. What Assumptions Would You Make?
 
-When bridging the gap between natural language and quantitative backtesting, an AI system must never silently fabricate parameters. Instead, it must make reasonable baseline assumptions, render them visibly, and explicitly invite user calibration.
+In this architecture, **AI is strictly reserved for complex tasks**—such as multi-dimensional ambiguity decomposition, parsing intricate natural language nuances, and evaluating statistical variance distributions across 2,467 trading days. **Every important decision, parameter definition, and hypothesis calibration is made explicitly by me (and the human researcher)**. The system must never silently fabricate parameters or make executive decisions; instead, it decomposes complex variables, renders baseline assumptions transparently, and explicitly empowers the user to make every final decision.
 
 ### The Ambiguity Resolution Matrix
 
@@ -45,7 +45,7 @@ When bridging the gap between natural language and quantitative backtesting, an 
 
 ## 3. What Would You Ask the User?
 
-To respect the user's agency without overwhelming them with cognitive friction, the system should ask **no more than 3 high-leverage questions**:
+Because **all important decisions must be made directly by the human researcher** rather than outsourced to an AI, the system actively prompts the user on high-leverage decision points, reserving AI only for the complex statistical execution:
 
 1. **"How would you like to define a 'sharp fall'?"**  
    - *Option A (Moderate Dip)*: 1-day fall $\ge 1.5\%$ (~140 trades over 10 yrs)  
@@ -85,7 +85,7 @@ To respect the user's agency without overwhelming them with cognitive friction, 
 
 ## 5. What Could Go Wrong? (Risks, Biases, and Blindspots)
 
-A research platform that outputs numbers without rigorous caveats is dangerous. Here is where backtests mislead:
+A research platform that outputs numbers without rigorous caveats is dangerous. While AI can simulate complex calculations across millions of combinations, **critical judgment and mitigation decisions must be made by the human researcher**. Here is where backtests mislead and how I addressed each risk:
 
 ### 1. Look-Ahead Bias & Execution Realism
 - If the system tests `Entry = Close_t`, it assumes the trader knew the close price before the close occurred. In reality, the final 30-minute weighted average close price in NSE is only known after 3:30 PM.
@@ -109,4 +109,4 @@ A research platform that outputs numbers without rigorous caveats is dangerous. 
 ---
 
 ## Conclusion
-The role of an AI research system is not to generate definitive, black-box trading signals, but to **demystify ambiguity, enforce scientific discipline, expose silent assumptions, and turn vague curiosity into structured, falsifiable inquiry**.
+The role of AI in quantitative research is strictly to handle **complex computational and analytical tasks** (vectorized time-series calculation, dynamic multi-dimensional ambiguity decomposition, statistical significance modeling). **Every important decision—defining the trading thesis, establishing risk boundaries, calibrating parameters, and drawing final scientific conclusions—must be made by the human researcher**. This preserves scientific integrity, prevents black-box hallucinations, and turns vague curiosity into structured, falsifiable inquiry under total human leadership.

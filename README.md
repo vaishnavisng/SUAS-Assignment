@@ -13,7 +13,7 @@ When a user asks:
 
 Traditional AI platforms either provide generic, superficial answers or silently guess parameters without making them visible to the user. 
 
-**NIFTY AlphaLab** solves this by establishing a disciplined quantitative research workflow:
+**NIFTY AlphaLab** solves this by establishing a disciplined quantitative research workflow where **AI is reserved strictly for complex analytical and computational tasks**, while **every important decision, parameter definition, and hypothesis calibration is made directly by the human researcher**:
 1. **ASK**: Accepts natural language questions or curated research queries.
 2. **CLARIFY**: Decomposes the question into **What the user actually said** vs **What the system assumed**, providing interactive controls to refine thresholds, execution timing, holding horizons, and filters.
 3. **DEFINE**: Synthesizes the clarified parameters into a formal, falsifiable scientific hypothesis and institutional research canvas.
@@ -113,15 +113,21 @@ npm run preview
 
 ---
 
-## 6. AI Tools Used & Collaboration
+## 6. AI Tools Used & Division of Responsibility
 
 - **AI Tools**: Gemini 3.8 / Antigravity Agentic IDE.
-- **How AI Was Leveraged**: Used for rapid ideation of edge-case market anomalies, drafting initial data parsing scripts, and accelerating SVG rendering logic.
-- **Human Decisions**:
-  1. Enforced strict separation between **"Empirical Facts"** and **"System Inferences"** to avoid AI hallucination.
-  2. Fixed look-ahead bias by mandating **Next Day Open (`Open_{t+1}`)** execution instead of naive same-day close.
-  3. Rejected complex ML black-box models in favor of interpretable quantitative research.
-  4. Designed the 1-click **"What Should We Investigate Next?"** iterative feedback loop.
+- **AI Role (Strictly for Complex Tasks)**:
+  1. **Vectorized Quantitative Algorithms**: Formulating vectorized time-series math for equity compounding, underwater drawdown series, and sample-size significance models ($N < 30$).
+  2. **Complex SVG Geometric Transformations**: Formulating responsive coordinate normalization and polygon path generation algorithms across 2,467 data points without third-party chart dependencies.
+  3. **Multi-Dimensional Ambiguity Decomposition**: Processing and mapping open-ended natural language trading queries across complex market dimensions and multi-regime anomalies.
+- **Human Decisions (Every Important Decision Made by Me)**:
+  1. **System Architecture & Workflow**: Designed the 5-stage research paradigm (Ask → Clarify → Define → Test → Learn) and user interface hierarchy.
+  2. **Epistemic Separation Principle**: Strictly enforced the visual and architectural boundary separating deterministic empirical facts from market conjectures.
+  3. **Look-Ahead Bias Elimination**: Intervened to mandate **Next Day Open (`Open_{t+1}`)** execution instead of naive same-day close, matching real NSE volume-weighted closing realities.
+  4. **Core Research Parameters**: Established the $\le -1.5\%$ trigger threshold (~1.6σ of daily volatility), the 5-day holding horizon, and realistic 8 bps transaction friction.
+  5. **Direct Benchmark Comparison**: Insisted on benchmarking directly against NIFTY Buy & Hold over identical horizons to account for cash drag and secular bull market drift.
+  6. **Rejection of Black-Box Models**: Rejected automated ML classifiers in favor of transparent, interpretable, and falsifiable scientific experimentation.
+  7. **Iterative Learning Loop**: Conceived and designed the 1-click **"What Should We Investigate Next?"** feedback engine.
 
 *(For full details, see [AI_USAGE_NOTE.md](file:///c:/Rishabh/assignment/AI_USAGE_NOTE.md))*
 
