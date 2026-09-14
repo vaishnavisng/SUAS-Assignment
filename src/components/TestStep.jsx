@@ -56,9 +56,9 @@ export default function TestStep({ results, onProceed, onBack }) {
         <div className="metric-card">
           <div className="metric-title">
             <span>Profit Factor</span>
-            <BarChart3 size={16} color="#818cf8" />
+            <BarChart3 size={16} color="var(--font-accent)" />
           </div>
-          <div className="metric-val" style={{ color: '#818cf8' }}>
+          <div className="metric-val" style={{ color: 'var(--font-accent)' }}>
             {metrics.profitFactor}x
           </div>
           <div className="metric-sub">
@@ -95,9 +95,9 @@ export default function TestStep({ results, onProceed, onBack }) {
         <div className="metric-card">
           <div className="metric-title">
             <span>Market Exposure</span>
-            <Percent size={16} color="#38bdf8" />
+            <Percent size={16} color="var(--font-accent)" />
           </div>
-          <div className="metric-val" style={{ color: '#38bdf8' }}>
+          <div className="metric-val" style={{ color: 'var(--font-accent)' }}>
             {metrics.exposureTimePct}%
           </div>
           <div className="metric-sub">

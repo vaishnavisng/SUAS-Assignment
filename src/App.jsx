@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import AskStep from './components/AskStep';
 import ClarifyStep from './components/ClarifyStep';
@@ -10,6 +10,16 @@ import { runExperiment } from './engine/backtester';
 import { parseQuestion } from './engine/researchInterpreter';
 
 export default function App() {
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('alphalab-theme') || 'mint-green';
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    document.body.setAttribute('data-theme', theme);
+    localStorage.setItem('alphalab-theme', theme);
+  }, [theme]);
+
   const [currentStep, setCurrentStep] = useState('ask');
   const [query, setQuery] = useState('Does buying NIFTY after a sharp fall work?');
   const [parsed, setParsed] = useState(() => parseQuestion('Does buying NIFTY after a sharp fall work?'));
@@ -84,6 +94,8 @@ export default function App() {
         currentStep={currentStep}
         setStep={setCurrentStep}
         canNavigateTo={canNavigateTo}
+        theme={theme}
+        setTheme={setTheme}
       />
 
       <main>

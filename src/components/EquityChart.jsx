@@ -89,13 +89,13 @@ export default function EquityChart({ data }) {
         <div className="chart-legend">
           <div className="legend-item">
             <span className="legend-dot strategy"></span>
-            <span style={{ color: '#c7d2fe', fontWeight: 500 }}>
+            <span style={{ color: 'var(--font-accent)', fontWeight: 600 }}>
               Strategy: ₹{activePoint.strategyEquity.toLocaleString()}
             </span>
           </div>
           <div className="legend-item">
             <span className="legend-dot benchmark"></span>
-            <span style={{ color: '#94a3b8', fontWeight: 500 }}>
+            <span style={{ color: 'var(--text-secondary)', fontWeight: 500 }}>
               Buy & Hold: ₹{activePoint.benchmarkEquity.toLocaleString()}
             </span>
           </div>
@@ -119,8 +119,8 @@ export default function EquityChart({ data }) {
         >
           <defs>
             <linearGradient id="stratGradient" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#6366f1" stopOpacity="0.35" />
-              <stop offset="100%" stopColor="#6366f1" stopOpacity="0.0" />
+              <stop offset="0%" stopColor="var(--chart-strategy, #10b981)" stopOpacity="0.35" />
+              <stop offset="100%" stopColor="var(--chart-strategy, #10b981)" stopOpacity="0.0" />
             </linearGradient>
           </defs>
 
@@ -160,11 +160,11 @@ export default function EquityChart({ data }) {
             strokeDasharray="3 3"
           />
 
-          {/* Strategy line (indigo solid) */}
+          {/* Strategy line (accent solid) */}
           <path
             d={strategyPath}
             fill="none"
-            stroke="#6366f1"
+            stroke="var(--chart-strategy, #10b981)"
             strokeWidth="2.4"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -231,10 +231,10 @@ export default function EquityChart({ data }) {
               boxShadow: 'var(--shadow-md)'
             }}
           >
-            <div style={{ color: '#94a3b8', marginBottom: '2px' }}>{activePoint.date}</div>
-            <div style={{ color: '#818cf8', fontWeight: 600 }}>Strategy: ₹{activePoint.strategyEquity.toLocaleString()}</div>
-            <div style={{ color: '#94a3b8' }}>Buy & Hold: ₹{activePoint.benchmarkEquity.toLocaleString()}</div>
-            <div style={{ color: activePoint.drawdownPct < 0 ? '#f43f5e' : '#10b981', fontSize: '0.7rem', marginTop: '2px' }}>
+            <div style={{ color: 'var(--text-muted)', marginBottom: '2px' }}>{activePoint.date}</div>
+            <div style={{ color: 'var(--font-accent)', fontWeight: 600 }}>Strategy: ₹{activePoint.strategyEquity.toLocaleString()}</div>
+            <div style={{ color: 'var(--text-secondary)' }}>Buy & Hold: ₹{activePoint.benchmarkEquity.toLocaleString()}</div>
+            <div style={{ color: activePoint.drawdownPct < 0 ? '#f43f5e' : 'var(--success)', fontSize: '0.7rem', marginTop: '2px' }}>
               Drawdown: {activePoint.drawdownPct}%
             </div>
           </div>

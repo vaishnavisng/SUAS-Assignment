@@ -41,7 +41,7 @@ export default function LearnStep({ results, onApplyNextHypothesis, onRestart })
 
         {/* Column 2: Inferences */}
         <div className="glass-card learn-col-inferences">
-          <div className="learn-col-title" style={{ color: '#818cf8' }}>
+          <div className="learn-col-title" style={{ color: 'var(--font-accent)' }}>
             <Compass size={20} />
             <span>What We Can Reasonably Conclude (System Beliefs)</span>
           </div>

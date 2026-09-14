@@ -1,7 +1,7 @@
 import React from 'react';
 import { Compass, CheckCircle2, ChevronRight, Activity } from 'lucide-react';
 
-export default function Navbar({ currentStep, setStep, canNavigateTo }) {
+export default function Navbar({ currentStep, setStep, canNavigateTo, theme, setTheme }) {
   const steps = [
     { id: 'ask', label: '1. Ask' },
     { id: 'clarify', label: '2. Clarify' },
@@ -45,6 +45,31 @@ export default function Navbar({ currentStep, setStep, canNavigateTo }) {
           );
         })}
       </nav>
+
+      <div className="nav-actions">
+        <div className="theme-toggle-group" role="radiogroup" aria-label="Select Font and Color Theme">
+          <button
+            type="button"
+            className={`theme-toggle-btn ${theme === 'mint-green' ? 'active' : ''}`}
+            onClick={() => setTheme('mint-green')}
+            id="theme-btn-mint"
+            title="Switch to Mint Green font and theme"
+          >
+            <span className="theme-dot mint"></span>
+            Mint Green
+          </button>
+          <button
+            type="button"
+            className={`theme-toggle-btn ${theme === 'light-blue' ? 'active' : ''}`}
+            onClick={() => setTheme('light-blue')}
+            id="theme-btn-blue"
+            title="Switch to Light Blue font and theme"
+          >
+            <span className="theme-dot blue"></span>
+            Light Blue
+          </button>
+        </div>
+      </div>
     </header>
   );
 }

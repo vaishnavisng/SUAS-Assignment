@@ -25,7 +25,7 @@ export default function ClarifyStep({ parsed, config, setConfig, onProceed, onBa
             <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
               Investigating Query
             </span>
-            <div style={{ fontSize: '1.15rem', fontWeight: 600, color: '#f8fafc', marginTop: '2px' }}>
+            <div style={{ fontSize: '1.15rem', fontWeight: 600, color: 'var(--text-primary)', marginTop: '2px' }}>
               “{parsed.rawQuestion}”
             </div>
           </div>
@@ -139,7 +139,7 @@ export default function ClarifyStep({ parsed, config, setConfig, onProceed, onBa
                   )}
 
                   {item.key === 'costBps' && (
-                    <span style={{ fontSize: '0.82rem', fontFamily: 'var(--font-mono)', color: '#a5b4fc', padding: '4px 8px', background: 'rgba(99, 102, 241, 0.1)', borderRadius: '4px' }}>
+                    <span style={{ fontSize: '0.82rem', fontFamily: 'var(--font-mono)', color: 'var(--font-accent)', padding: '4px 8px', background: 'var(--accent-glow)', borderRadius: '4px', border: '1px solid var(--border-accent)' }}>
                       0.08% / trade (STT + Slippage)
                     </span>
                   )}

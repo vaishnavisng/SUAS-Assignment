@@ -86,7 +86,7 @@ export default function DefineStep({ parsed, config, onRunTest, onBack }) {
 
           <div className="canvas-card">
             <div className="canvas-card-label">Regime Filter</div>
-            <div className="canvas-card-val" style={{ color: config.trendFilter === 'above_200_sma' ? '#818cf8' : '#94a3b8' }}>
+            <div className="canvas-card-val" style={{ color: config.trendFilter === 'above_200_sma' ? 'var(--font-accent)' : 'var(--text-muted)' }}>
               {config.trendFilter === 'above_200_sma' ? '200-day SMA Bull Filter' : 'None (All Regimes)'}
             </div>
             <div className="canvas-card-desc">
