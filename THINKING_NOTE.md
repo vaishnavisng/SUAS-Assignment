@@ -2,7 +2,6 @@
 
 **Author**: Vaishnavi Singh 
 
-**Challenge**: Thinking & Building Challenge — AI-Native Trading Research Platform  
 **Target Flow**: Question → Hypothesis → Experiment → Evidence → Learning  
 
 ---
