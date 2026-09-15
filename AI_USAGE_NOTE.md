@@ -1,7 +1,6 @@
 # AI Usage Note: Collaborative Engineering Reflection
 
-**Author**: AI Full-Stack Developer Intern Candidate  
-**Document**: AI Usage Note (Thinking & Building Challenge)  
+**Author**: Vaishnavi Singh  
 
 ---
 
