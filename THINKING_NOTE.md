@@ -1,6 +1,6 @@
 # Thinking Note: Deconstructing "Does buying NIFTY after a sharp fall work?"
 
-**Author**: AI Full-Stack Developer Intern Candidate  
+**Author**: Vaishnavi Singh 
 **Challenge**: Thinking & Building Challenge — AI-Native Trading Research Platform  
 **Target Flow**: Question → Hypothesis → Experiment → Evidence → Learning  
 
